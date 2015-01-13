@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationMuseum", "WebApplicationMuseum\WebApplicationMuseum.csproj", "{FD7FA398-ED12-47D5-AEB6-07FD4129B2FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD7FA398-ED12-47D5-AEB6-07FD4129B2FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD7FA398-ED12-47D5-AEB6-07FD4129B2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD7FA398-ED12-47D5-AEB6-07FD4129B2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD7FA398-ED12-47D5-AEB6-07FD4129B2FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/WcfServiceMuseumNew/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/WcfServiceMuseumNew/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/WcfServiceMuseumNew/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_getMuseum_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMuseum" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getMuseum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMuseumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateMuseum_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateMuseum" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateMuseum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateMuseumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLocations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateLocations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteLocation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:findLocations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:addLocations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getExhibits_InputMessage">
+    <wsdl:part name="parameters" element="tns:getExhibits" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getExhibits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getExhibitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findExhibits_InputMessage">
+    <wsdl:part name="parameters" element="tns:findExhibits" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findExhibits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findExhibitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteExhibits_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteExhibits" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteExhibits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteExhibitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addExhibits_InputMessage">
+    <wsdl:part name="parameters" element="tns:addExhibits" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addExhibits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addExhibitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateExhibits_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateExhibits" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateExhibits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateExhibitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getOrderForms_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrderForms" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getOrderForms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrderFormsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteOrderForms_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteOrderForms" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteOrderForms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteOrderFormsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addOrderForms_InputMessage">
+    <wsdl:part name="parameters" element="tns:addOrderForms" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addOrderForms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addOrderFormsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateOrderForms_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateOrderForms" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateOrderForms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateOrderFormsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findOrderForms_InputMessage">
+    <wsdl:part name="parameters" element="tns:findOrderForms" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findOrderForms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findOrderFormsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getBuyers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBuyers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getBuyers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBuyersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteBuyers_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteBuyers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteBuyers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteBuyersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addBuyers_InputMessage">
+    <wsdl:part name="parameters" element="tns:addBuyers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addBuyers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addBuyersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateBuyers_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateBuyers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateBuyers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateBuyersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findBuyers_InputMessage">
+    <wsdl:part name="parameters" element="tns:findBuyers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findBuyers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findBuyersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:findUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:addUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="getMuseum">
+      <wsdl:input wsaw:Action="MuseumService/GetMuseum" message="tns:IService1_getMuseum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getMuseumResponse" message="tns:IService1_getMuseum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMuseum">
+      <wsdl:input wsaw:Action="MuseumService/UpdateMuseum" message="tns:IService1_updateMuseum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateMuseumResponse" message="tns:IService1_updateMuseum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLocations">
+      <wsdl:input wsaw:Action="MuseumService/GetLocations" message="tns:IService1_getLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getLocationsResponse" message="tns:IService1_getLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLocations">
+      <wsdl:input wsaw:Action="MuseumService/UpdateLocations" message="tns:IService1_updateLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateLocationsResponse" message="tns:IService1_updateLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteLocation">
+      <wsdl:input wsaw:Action="MuseumService/DeleteLocation" message="tns:IService1_deleteLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteLocationResponse" message="tns:IService1_deleteLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findLocations">
+      <wsdl:input wsaw:Action="MuseumService/FindLocations" message="tns:IService1_findLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/findLocationsResponse" message="tns:IService1_findLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addLocations">
+      <wsdl:input wsaw:Action="MuseumService/AddLocations" message="tns:IService1_addLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addLocationsResponse" message="tns:IService1_addLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getExhibits">
+      <wsdl:input wsaw:Action="MuseumService/GetExhibits" message="tns:IService1_getExhibits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getExhibitsResponse" message="tns:IService1_getExhibits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findExhibits">
+      <wsdl:input wsaw:Action="MuseumService/FindExhibits" message="tns:IService1_findExhibits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/findExhibitsResponse" message="tns:IService1_findExhibits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteExhibits">
+      <wsdl:input wsaw:Action="MuseumService/DeleteExhibits" message="tns:IService1_deleteExhibits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteExhibitsResponse" message="tns:IService1_deleteExhibits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addExhibits">
+      <wsdl:input wsaw:Action="MuseumService/AddExhibits" message="tns:IService1_addExhibits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addExhibitsResponse" message="tns:IService1_addExhibits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateExhibits">
+      <wsdl:input wsaw:Action="MuseumService/UpdateExhibits" message="tns:IService1_updateExhibits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateExhibitsResponse" message="tns:IService1_updateExhibits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrderForms">
+      <wsdl:input wsaw:Action="MuseumService/GetOrderForms" message="tns:IService1_getOrderForms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getOrderFormsResponse" message="tns:IService1_getOrderForms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrderForms">
+      <wsdl:input wsaw:Action="ServiceMuseum/DeleteOrderForms" message="tns:IService1_deleteOrderForms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteOrderFormsResponse" message="tns:IService1_deleteOrderForms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addOrderForms">
+      <wsdl:input wsaw:Action="MuseumService/AddOrderForms" message="tns:IService1_addOrderForms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addOrderFormsResponse" message="tns:IService1_addOrderForms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateOrderForms">
+      <wsdl:input wsaw:Action="MuseumService/UpdateOrderForms" message="tns:IService1_updateOrderForms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateOrderFormsResponse" message="tns:IService1_updateOrderForms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findOrderForms">
+      <wsdl:input wsaw:Action="MuseumService/FindOrderForms" message="tns:IService1_findOrderForms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/findOrderFormsResponse" message="tns:IService1_findOrderForms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBuyers">
+      <wsdl:input wsaw:Action="MuseumService/GetBuyers" message="tns:IService1_getBuyers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getBuyersResponse" message="tns:IService1_getBuyers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteBuyers">
+      <wsdl:input wsaw:Action="MuseumService/DeleteBuyers" message="tns:IService1_deleteBuyers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteBuyersResponse" message="tns:IService1_deleteBuyers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addBuyers">
+      <wsdl:input wsaw:Action="MuseumService/AddBuyers" message="tns:IService1_addBuyers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addBuyersResponse" message="tns:IService1_addBuyers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateBuyers">
+      <wsdl:input wsaw:Action="MuseumService/UpdateBuyers" message="tns:IService1_updateBuyers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateBuyersResponse" message="tns:IService1_updateBuyers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findBuyers">
+      <wsdl:input wsaw:Action="MuseumService/FindBuyers" message="tns:IService1_findBuyers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/findBuyersResponse" message="tns:IService1_findBuyers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <wsdl:input wsaw:Action="MuseumService/GetUsers" message="tns:IService1_getUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUsersResponse" message="tns:IService1_getUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUsers">
+      <wsdl:input wsaw:Action="MuseumService/DeleteUsers" message="tns:IService1_deleteUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteUsersResponse" message="tns:IService1_deleteUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findUsers">
+      <wsdl:input wsaw:Action="MuseumService/FindUsers" message="tns:IService1_findUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/findUsersResponse" message="tns:IService1_findUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addUsers">
+      <wsdl:input wsaw:Action="MuseumService/AddUsers" message="tns:IService1_addUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addUsersResponse" message="tns:IService1_addUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUsers">
+      <wsdl:input wsaw:Action="MuseumService/UpdateUsers" message="tns:IService1_updateUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateUsersResponse" message="tns:IService1_updateUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getMuseum">
+      <soap:operation soapAction="MuseumService/GetMuseum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMuseum">
+      <soap:operation soapAction="MuseumService/UpdateMuseum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLocations">
+      <soap:operation soapAction="MuseumService/GetLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLocations">
+      <soap:operation soapAction="MuseumService/UpdateLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLocation">
+      <soap:operation soapAction="MuseumService/DeleteLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLocations">
+      <soap:operation soapAction="MuseumService/FindLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addLocations">
+      <soap:operation soapAction="MuseumService/AddLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExhibits">
+      <soap:operation soapAction="MuseumService/GetExhibits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findExhibits">
+      <soap:operation soapAction="MuseumService/FindExhibits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteExhibits">
+      <soap:operation soapAction="MuseumService/DeleteExhibits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addExhibits">
+      <soap:operation soapAction="MuseumService/AddExhibits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateExhibits">
+      <soap:operation soapAction="MuseumService/UpdateExhibits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderForms">
+      <soap:operation soapAction="MuseumService/GetOrderForms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrderForms">
+      <soap:operation soapAction="ServiceMuseum/DeleteOrderForms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOrderForms">
+      <soap:operation soapAction="MuseumService/AddOrderForms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOrderForms">
+      <soap:operation soapAction="MuseumService/UpdateOrderForms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findOrderForms">
+      <soap:operation soapAction="MuseumService/FindOrderForms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBuyers">
+      <soap:operation soapAction="MuseumService/GetBuyers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteBuyers">
+      <soap:operation soapAction="MuseumService/DeleteBuyers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBuyers">
+      <soap:operation soapAction="MuseumService/AddBuyers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateBuyers">
+      <soap:operation soapAction="MuseumService/UpdateBuyers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findBuyers">
+      <soap:operation soapAction="MuseumService/FindBuyers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <soap:operation soapAction="MuseumService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUsers">
+      <soap:operation soapAction="MuseumService/DeleteUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUsers">
+      <soap:operation soapAction="MuseumService/FindUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUsers">
+      <soap:operation soapAction="MuseumService/AddUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUsers">
+      <soap:operation soapAction="MuseumService/UpdateUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost/WcfServiceMuseumNew/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

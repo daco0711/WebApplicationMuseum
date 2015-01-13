@@ -1,0 +1,5 @@
+D:\Diplomski\WebApplicationMuseum\WebApplicationMuseum\bin\WebApplicationMuseum.dll
+D:\Diplomski\WebApplicationMuseum\WebApplicationMuseum\bin\WebApplicationMuseum.pdb
+D:\Diplomski\WebApplicationMuseum\WebApplicationMuseum\obj\Debug\WebApplicationMuseum.dll
+D:\Diplomski\WebApplicationMuseum\WebApplicationMuseum\obj\Debug\WebApplicationMuseum.pdb
+D:\Diplomski\WebApplicationMuseum\WebApplicationMuseum\obj\Debug\WebApplicationMuseum.csprojResolveAssemblyReference.cache

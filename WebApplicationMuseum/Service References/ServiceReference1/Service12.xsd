@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfMuseum">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Museum" nillable="true" type="tns:Museum" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMuseum" nillable="true" type="tns:ArrayOfMuseum" />
+  <xs:complexType name="Museum">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Established" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MuseumAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MuseumId" type="xs:int" />
+      <xs:element minOccurs="0" name="MuseumName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Museum" nillable="true" type="tns:Museum" />
+  <xs:complexType name="ArrayOfLocations">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Locations" nillable="true" type="tns:Locations" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocations" nillable="true" type="tns:ArrayOfLocations" />
+  <xs:complexType name="Locations">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LeasePrice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationId" type="xs:int" />
+      <xs:element minOccurs="0" name="LocationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MuseumIdFK" type="xs:int" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Surface" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Locations" nillable="true" type="tns:Locations" />
+  <xs:complexType name="ArrayOfExhibits">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Exhibits" nillable="true" type="tns:Exhibits" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExhibits" nillable="true" type="tns:ArrayOfExhibits" />
+  <xs:complexType name="Exhibits">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dimensions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExhibitId" type="xs:int" />
+      <xs:element minOccurs="0" name="HistoricPeriod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationIdFK" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderFormIdFK" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Exhibits" nillable="true" type="tns:Exhibits" />
+  <xs:complexType name="ArrayOfOrderForms">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderForms" nillable="true" type="tns:OrderForms" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderForms" nillable="true" type="tns:ArrayOfOrderForms" />
+  <xs:complexType name="OrderForms">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuyerAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BuyerIdFK" type="xs:int" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderFormId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderForms" nillable="true" type="tns:OrderForms" />
+  <xs:complexType name="ArrayOfBuyers">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Buyers" nillable="true" type="tns:Buyers" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBuyers" nillable="true" type="tns:ArrayOfBuyers" />
+  <xs:complexType name="Buyers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuyersAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BuyersCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BuyersId" type="xs:int" />
+      <xs:element minOccurs="0" name="BuyersName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BuyersSurname" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Buyers" nillable="true" type="tns:Buyers" />
+  <xs:complexType name="ArrayOfUsers">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Users" nillable="true" type="tns:Users" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsers" nillable="true" type="tns:ArrayOfUsers" />
+  <xs:complexType name="Users">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsAdministrator" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Users" nillable="true" type="tns:Users" />
+  <xs:complexType name="CompositeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+</xs:schema>
