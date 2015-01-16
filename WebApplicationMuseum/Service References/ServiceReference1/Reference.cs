@@ -745,94 +745,97 @@ namespace WebApplicationMuseum.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="WcfServiceMuseumNew", ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetMuseum", ReplyAction="http://tempuri.org/IService1/getMuseumResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetMuseum", ReplyAction="WcfServiceMuseumNew/IService1/getMuseumResponse")]
         WebApplicationMuseum.ServiceReference1.Museum[] getMuseum();
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/UpdateMuseum", ReplyAction="http://tempuri.org/IService1/updateMuseumResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/UpdateMuseum", ReplyAction="WcfServiceMuseumNew/IService1/updateMuseumResponse")]
         void updateMuseum(int museumId, string museumName, string museumAddress, System.DateTime established);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetLocations", ReplyAction="http://tempuri.org/IService1/getLocationsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetLocations", ReplyAction="WcfServiceMuseumNew/IService1/getLocationsResponse")]
         WebApplicationMuseum.ServiceReference1.Locations[] getLocations();
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/UpdateLocations", ReplyAction="http://tempuri.org/IService1/updateLocationsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/UpdateLocations", ReplyAction="WcfServiceMuseumNew/IService1/updateLocationsResponse")]
         void updateLocations(int locationId, string locationName, string surface, string state, string leasePrice, int museumIdFK, string country);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/DeleteLocation", ReplyAction="http://tempuri.org/IService1/deleteLocationResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/DeleteLocation", ReplyAction="WcfServiceMuseumNew/IService1/deleteLocationResponse")]
         void deleteLocation(int locationId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/FindLocations", ReplyAction="http://tempuri.org/IService1/findLocationsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/FindLocations", ReplyAction="WcfServiceMuseumNew/IService1/findLocationsResponse")]
         WebApplicationMuseum.ServiceReference1.Locations[] findLocations(string locationName);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/AddLocations", ReplyAction="http://tempuri.org/IService1/addLocationsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetLocationsByID", ReplyAction="WcfServiceMuseumNew/IService1/getLocationsByIDResponse")]
+        WebApplicationMuseum.ServiceReference1.Locations getLocationsByID(int locationID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/AddLocations", ReplyAction="WcfServiceMuseumNew/IService1/addLocationsResponse")]
         void addLocations(string locationName, string surface, string state, string leasePrice, int museumIdFK, string country);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetExhibits", ReplyAction="http://tempuri.org/IService1/getExhibitsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetExhibits", ReplyAction="WcfServiceMuseumNew/IService1/getExhibitsResponse")]
         WebApplicationMuseum.ServiceReference1.Exhibits[] getExhibits();
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/FindExhibits", ReplyAction="http://tempuri.org/IService1/findExhibitsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/FindExhibits", ReplyAction="WcfServiceMuseumNew/IService1/findExhibitsResponse")]
         WebApplicationMuseum.ServiceReference1.Exhibits[] findExhibits(string type, string historicPeriod);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/DeleteExhibits", ReplyAction="http://tempuri.org/IService1/deleteExhibitsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/DeleteExhibits", ReplyAction="WcfServiceMuseumNew/IService1/deleteExhibitsResponse")]
         void deleteExhibits(int exhibitId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/AddExhibits", ReplyAction="http://tempuri.org/IService1/addExhibitsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/AddExhibits", ReplyAction="WcfServiceMuseumNew/IService1/addExhibitsResponse")]
         void addExhibits(string type, string dimensions, string historicPeriod, int locationIdFK, int orderFormIdFK);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/UpdateExhibits", ReplyAction="http://tempuri.org/IService1/updateExhibitsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/UpdateExhibits", ReplyAction="WcfServiceMuseumNew/IService1/updateExhibitsResponse")]
         void updateExhibits(int exhibitId, string type, string dimensions, string historicPeriod, int locationIdFK, int orderFormIdFK);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetOrderForms", ReplyAction="http://tempuri.org/IService1/getOrderFormsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetOrderForms", ReplyAction="WcfServiceMuseumNew/IService1/getOrderFormsResponse")]
         WebApplicationMuseum.ServiceReference1.OrderForms[] getOrderForms();
         
-        [System.ServiceModel.OperationContractAttribute(Action="ServiceMuseum/DeleteOrderForms", ReplyAction="http://tempuri.org/IService1/deleteOrderFormsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="ServiceMuseum/DeleteOrderForms", ReplyAction="WcfServiceMuseumNew/IService1/deleteOrderFormsResponse")]
         void deleteOrderForms(int orderFormId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/AddOrderForms", ReplyAction="http://tempuri.org/IService1/addOrderFormsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/AddOrderForms", ReplyAction="WcfServiceMuseumNew/IService1/addOrderFormsResponse")]
         void addOrderForms(System.DateTime date, string buyerAdress, int buyerIdFk);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/UpdateOrderForms", ReplyAction="http://tempuri.org/IService1/updateOrderFormsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/UpdateOrderForms", ReplyAction="WcfServiceMuseumNew/IService1/updateOrderFormsResponse")]
         void updateOrderForms(int orderFormId, System.DateTime date, string buyerAddress, int buyerIdFk);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/FindOrderForms", ReplyAction="http://tempuri.org/IService1/findOrderFormsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/FindOrderForms", ReplyAction="WcfServiceMuseumNew/IService1/findOrderFormsResponse")]
         WebApplicationMuseum.ServiceReference1.OrderForms[] findOrderForms(int buyerIdFk, string buyerAdress);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetBuyers", ReplyAction="http://tempuri.org/IService1/getBuyersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetBuyers", ReplyAction="WcfServiceMuseumNew/IService1/getBuyersResponse")]
         WebApplicationMuseum.ServiceReference1.Buyers[] getBuyers();
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/DeleteBuyers", ReplyAction="http://tempuri.org/IService1/deleteBuyersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/DeleteBuyers", ReplyAction="WcfServiceMuseumNew/IService1/deleteBuyersResponse")]
         void deleteBuyers(int buyerId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/AddBuyers", ReplyAction="http://tempuri.org/IService1/addBuyersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/AddBuyers", ReplyAction="WcfServiceMuseumNew/IService1/addBuyersResponse")]
         void addBuyers(string buyersName, string buyersSurname, string buyersAddress, string buyersCountry);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/UpdateBuyers", ReplyAction="http://tempuri.org/IService1/updateBuyersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/UpdateBuyers", ReplyAction="WcfServiceMuseumNew/IService1/updateBuyersResponse")]
         void updateBuyers(int buyersId, string buyersName, string buyersSurname, string buyersAddress, string buyersCountry);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/FindBuyers", ReplyAction="http://tempuri.org/IService1/findBuyersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/FindBuyers", ReplyAction="WcfServiceMuseumNew/IService1/findBuyersResponse")]
         WebApplicationMuseum.ServiceReference1.Buyers[] findBuyers(string buyersName, string buyersSurname);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetUsers", ReplyAction="http://tempuri.org/IService1/getUsersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/GetUsers", ReplyAction="WcfServiceMuseumNew/IService1/getUsersResponse")]
         WebApplicationMuseum.ServiceReference1.Users[] getUsers();
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/DeleteUsers", ReplyAction="http://tempuri.org/IService1/deleteUsersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/DeleteUsers", ReplyAction="WcfServiceMuseumNew/IService1/deleteUsersResponse")]
         void deleteUsers(int userId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/FindUsers", ReplyAction="http://tempuri.org/IService1/findUsersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/FindUsers", ReplyAction="WcfServiceMuseumNew/IService1/findUsersResponse")]
         WebApplicationMuseum.ServiceReference1.Users[] findUsers(string name, string userName);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/AddUsers", ReplyAction="http://tempuri.org/IService1/addUsersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/AddUsers", ReplyAction="WcfServiceMuseumNew/IService1/addUsersResponse")]
         void addUsers(string name, string userName, string password, bool isAdministrator);
         
-        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/UpdateUsers", ReplyAction="http://tempuri.org/IService1/updateUsersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="MuseumService/UpdateUsers", ReplyAction="WcfServiceMuseumNew/IService1/updateUsersResponse")]
         void updateUsers(int userID, string name, string userName, string password, bool isAdministrator);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="WcfServiceMuseumNew/IService1/GetData", ReplyAction="WcfServiceMuseumNew/IService1/GetDataResponse")]
         string GetData(int value);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="WcfServiceMuseumNew/IService1/GetDataUsingDataContract", ReplyAction="WcfServiceMuseumNew/IService1/GetDataUsingDataContractResponse")]
         WebApplicationMuseum.ServiceReference1.CompositeType GetDataUsingDataContract(WebApplicationMuseum.ServiceReference1.CompositeType composite);
     }
     
@@ -885,6 +888,10 @@ namespace WebApplicationMuseum.ServiceReference1 {
         
         public WebApplicationMuseum.ServiceReference1.Locations[] findLocations(string locationName) {
             return base.Channel.findLocations(locationName);
+        }
+        
+        public WebApplicationMuseum.ServiceReference1.Locations getLocationsByID(int locationID) {
+            return base.Channel.getLocationsByID(locationID);
         }
         
         public void addLocations(string locationName, string surface, string state, string leasePrice, int museumIdFK, string country) {

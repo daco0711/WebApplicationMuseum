@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="WcfServiceMuseumNew" elementFormDefault="qualified" targetNamespace="WcfServiceMuseumNew" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost/WcfServiceMuseumNew/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" />
   <xs:element name="getMuseum">
     <xs:complexType>
@@ -84,6 +84,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getLocationsByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="locationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLocationsByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="getLocationsByIDResult" nillable="true" type="q4:Locations" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="addLocations">
     <xs:complexType>
       <xs:sequence>
@@ -109,7 +123,7 @@
   <xs:element name="getExhibitsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="getExhibitsResult" nillable="true" type="q4:ArrayOfExhibits" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="getExhibitsResult" nillable="true" type="q5:ArrayOfExhibits" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -124,7 +138,7 @@
   <xs:element name="findExhibitsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="findExhibitsResult" nillable="true" type="q5:ArrayOfExhibits" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="findExhibitsResult" nillable="true" type="q6:ArrayOfExhibits" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -181,7 +195,7 @@
   <xs:element name="getOrderFormsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="getOrderFormsResult" nillable="true" type="q6:ArrayOfOrderForms" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="getOrderFormsResult" nillable="true" type="q7:ArrayOfOrderForms" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -237,7 +251,7 @@
   <xs:element name="findOrderFormsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="findOrderFormsResult" nillable="true" type="q7:ArrayOfOrderForms" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="findOrderFormsResult" nillable="true" type="q8:ArrayOfOrderForms" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -249,7 +263,7 @@
   <xs:element name="getBuyersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="getBuyersResult" nillable="true" type="q8:ArrayOfBuyers" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="getBuyersResult" nillable="true" type="q9:ArrayOfBuyers" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -307,7 +321,7 @@
   <xs:element name="findBuyersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="findBuyersResult" nillable="true" type="q9:ArrayOfBuyers" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="findBuyersResult" nillable="true" type="q10:ArrayOfBuyers" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -319,7 +333,7 @@
   <xs:element name="getUsersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="getUsersResult" nillable="true" type="q10:ArrayOfUsers" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="getUsersResult" nillable="true" type="q11:ArrayOfUsers" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -346,7 +360,7 @@
   <xs:element name="findUsersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="findUsersResult" nillable="true" type="q11:ArrayOfUsers" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="findUsersResult" nillable="true" type="q12:ArrayOfUsers" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -398,14 +412,14 @@
   <xs:element name="GetDataUsingDataContract">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="composite" nillable="true" type="q12:CompositeType" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="composite" nillable="true" type="q13:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetDataUsingDataContractResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q13:CompositeType" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WcfServiceMuseumNew" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q14:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -21,11 +21,12 @@
     <MetadataSource Address="http://localhost/WcfServiceMuseumNew/Service1.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="989e2788-c826-4f84-a102-dcdebb337f08" SourceId="1" SourceUrl="http://localhost/WcfServiceMuseumNew/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="3872037c-d7b7-4252-8610-82d86bec4d2e" SourceId="1" SourceUrl="http://localhost/WcfServiceMuseumNew/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="9d770a38-b50d-42ed-8636-e23b497206d6" SourceId="1" SourceUrl="http://localhost/WcfServiceMuseumNew/Service1.svc?xsd=xsd1" />
     <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="7b357a90-32ee-4a2d-91ee-49531db2c4d8" SourceId="1" SourceUrl="http://localhost/WcfServiceMuseumNew/Service1.svc?disco" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="989e2788-c826-4f84-a102-dcdebb337f08" SourceId="1" SourceUrl="http://localhost/WcfServiceMuseumNew/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="9d770a38-b50d-42ed-8636-e23b497206d6" SourceId="1" SourceUrl="http://localhost/WcfServiceMuseumNew/Service1.svc?xsd=xsd1" />
     <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="1cc06da4-1f16-4198-9ee4-43671194171e" SourceId="1" SourceUrl="http://localhost/WcfServiceMuseumNew/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="3872037c-d7b7-4252-8610-82d86bec4d2e" SourceId="1" SourceUrl="http://localhost/WcfServiceMuseumNew/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="a222eacb-4ba5-4722-ae36-0dce091350ed" SourceId="1" SourceUrl="http://localhost/WcfServiceMuseumNew/Service1.svc?wsdl=wsdl0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
